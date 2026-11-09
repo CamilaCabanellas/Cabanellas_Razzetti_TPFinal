@@ -1,0 +1,352 @@
+/* ==========================================================
+   Índice:
+   1. Variables (paleta, tipografía, override de Bootstrap)
+   2. Base y tipografía
+   3. Botones
+   4. Header / navegación
+   5. Utilidades de sección
+   6. Home (hero, qué es, obras destacadas, pasos, CTA)
+   7. Tarjetas de obra
+   8. Quiénes somos
+   9. Servicios
+   10. Contacto (formulario, mapa, video)
+   11. Footer
+   12. Alineación con el container (secciones a sangre)
+   13. Carrito (ícono del header y botones)
+   14. Panel del carrito (offcanvas, solo en productos.html)
+   ========================================================== */
+
+/* 1. VARIABLES ---------------------------------------------- */
+:root {
+  /* Paleta Tabula */
+  --tb-ink: #1C1C16;
+  --tb-cream: #F1EEDF;
+  --tb-sand: #B49177;
+  --tb-rust: #8A492A;
+  --tb-rust-dark: #6F3A21;
+  --tb-white: #FFFFFF;
+  --tb-line: rgba(28, 28, 22, .16);
+  --tb-muted: rgba(28, 28, 22, .8);
+
+  /* Tipografía */
+  --tb-font-title: "EB Garamond", Georgia, serif;
+  --tb-font-text: "DM Sans", system-ui, sans-serif;
+
+  /* Override de variables de Bootstrap */
+  --bs-primary: #8A492A;
+  --bs-primary-rgb: 138, 73, 42;
+  --bs-secondary: #B49177;
+  --bs-secondary-rgb: 180, 145, 119;
+  --bs-dark: #1C1C16;
+  --bs-dark-rgb: 28, 28, 22;
+  --bs-light: #F1EEDF;
+  --bs-light-rgb: 241, 238, 223;
+  --bs-body-bg: #F1EEDF;
+  --bs-body-color: #1C1C16;
+  --bs-body-color-rgb: 28, 28, 22;
+  --bs-body-font-family: var(--tb-font-text);
+  --bs-body-font-size: 1rem;
+  --bs-body-line-height: 1.5;
+  --bs-heading-color: #1C1C16;
+  --bs-link-color: #8A492A;
+  --bs-link-color-rgb: 138, 73, 42;
+  --bs-link-hover-color: #6F3A21;
+  --bs-link-hover-color-rgb: 111, 58, 33;
+  --bs-border-color: rgba(28, 28, 22, .16);
+  --bs-border-radius: 0;
+  --bs-border-radius-sm: 0;
+  --bs-border-radius-lg: 0;
+  --bs-border-radius-pill: 999px;
+  --bs-focus-ring-color: rgba(138, 73, 42, .25);
+}
+
+/* 2. BASE Y TIPOGRAFÍA -------------------------------------- */
+/* Ajustes base sobre el Reboot de Bootstrap (reemplazan al reset.css) */
+h1, h2, h3, h4, p, ul, figure { margin: 0; }
+ul { padding: 0; list-style: none; }
+img, iframe { display: block; max-width: 100%; }
+a { text-decoration: none; }
+body { background: var(--tb-cream); color: var(--tb-ink); }
+h1, h2, h3, h4, .h1, .h2, .h3 {
+  font-family: var(--tb-font-title);
+  font-weight: 600;
+  color: var(--tb-ink);
+  letter-spacing: -.01em;
+}
+h1, .h1 { font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.12; }
+h2, .h2 { font-size: clamp(1.75rem, 3.4vw, 2.5rem); line-height: 1.2; }
+h3, .h3 { font-size: 1.375rem; line-height: 1.3; }
+p { color: var(--tb-muted); }
+.lead { font-family: var(--tb-font-title); font-size: 1.25rem; line-height: 1.6; color: var(--tb-muted); font-weight: 400; }
+strong { font-weight: 700; color: var(--tb-ink); }
+a:focus-visible, button:focus-visible, .btn:focus-visible {
+  outline: 2px solid var(--tb-rust); outline-offset: 2px;
+}
+.eyebrow {
+  display: block; margin-bottom: 1rem;
+  font-size: .75rem; font-weight: 500; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--tb-rust);
+}
+.link-flecha { font-size: .875rem; font-weight: 500; color: var(--tb-rust); }
+.link-flecha:hover { color: var(--tb-rust-dark); text-decoration: underline; }
+
+/* 3. BOTONES (override de .btn de Bootstrap) ---------------- */
+.btn {
+  --bs-btn-border-radius: 0;
+  --bs-btn-font-size: .875rem;
+  --bs-btn-padding-x: 1.5rem;
+  --bs-btn-padding-y: .5rem;
+  font-weight: 500; line-height: 1.5;
+}
+.btn-primary {
+  --bs-btn-bg: var(--tb-rust); --bs-btn-border-color: var(--tb-rust); --bs-btn-color: #fff;
+  --bs-btn-hover-bg: var(--tb-rust-dark); --bs-btn-hover-border-color: var(--tb-rust-dark); --bs-btn-hover-color: #fff;
+  --bs-btn-active-bg: var(--tb-rust-dark); --bs-btn-active-border-color: var(--tb-rust-dark);
+  --bs-btn-focus-shadow-rgb: 138, 73, 42;
+}
+.btn-outline-dark {
+  --bs-btn-color: var(--tb-ink); --bs-btn-border-color: var(--tb-ink);
+  --bs-btn-hover-bg: var(--tb-ink); --bs-btn-hover-border-color: var(--tb-ink); --bs-btn-hover-color: var(--tb-cream);
+  --bs-btn-active-bg: var(--tb-ink); --bs-btn-active-border-color: var(--tb-ink);
+}
+.btn-cream {                         /* botón crema sobre fondo terracota */
+  --bs-btn-bg: var(--tb-cream); --bs-btn-border-color: var(--tb-cream); --bs-btn-color: var(--tb-ink);
+  --bs-btn-hover-bg: #fff; --bs-btn-hover-border-color: #fff; --bs-btn-hover-color: var(--tb-ink);
+}
+.btn-outline-cream {
+  --bs-btn-color: var(--tb-cream); --bs-btn-border-color: rgba(241,238,223,.6);
+  --bs-btn-hover-bg: var(--tb-cream); --bs-btn-hover-border-color: var(--tb-cream); --bs-btn-hover-color: var(--tb-rust);
+}
+
+/* 4. HEADER / NAVEGACIÓN ------------------------------------ */
+.site-header { background: var(--tb-cream); border-bottom: 1px solid var(--tb-line); position: sticky; top: 0; z-index: 1030; }
+.navbar { --bs-navbar-padding-y: 1rem; }
+.navbar-brand {
+  font-family: var(--tb-font-text); font-weight: 900; font-size: 1.25rem;
+  letter-spacing: .12em; color: var(--tb-ink);
+}
+.navbar-nav .nav-link {
+  --bs-nav-link-color: var(--tb-ink); --bs-nav-link-hover-color: var(--tb-rust);
+  font-size: .875rem; padding: .5rem 1rem;
+}
+/* Página activa: se marca con .active + aria-current="page" */
+.navbar-nav .nav-link.active { font-weight: 700; color: var(--tb-ink); border-bottom: 2px solid var(--tb-rust); }
+@media (min-width: 992px) {
+  .navbar-nav .nav-link.active { border-bottom-color: var(--tb-rust); }
+}
+.navbar-toggler { border: 1px solid var(--tb-ink); padding: .375rem .625rem; }
+.navbar-toggler:focus { box-shadow: 0 0 0 .2rem var(--bs-focus-ring-color); }
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%231C1C16' stroke-linecap='round' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* 5. UTILIDADES DE SECCIÓN ---------------------------------- */
+.seccion { padding: 5rem 0; position: relative; overflow: hidden; }
+@media (max-width: 767.98px) { .seccion { padding: 3rem 0; } }
+.bg-tb-cream { background: var(--tb-cream); }
+.bg-tb-white { background: var(--tb-white); }
+.bg-tb-rust { background: var(--tb-rust); color: var(--tb-cream); }
+.seccion-cabecera { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 1rem; margin-bottom: 3rem; }
+/* Círculos decorativos del diseño (línea fina) */
+.circulos::before {
+  content: ""; position: absolute; top: -120px; right: -160px;
+  width: 480px; height: 480px; border: 1px solid var(--tb-sand); border-radius: 50%;
+  opacity: .5; pointer-events: none;
+}
+.bg-tb-rust.circulos::before { border-color: rgba(241,238,223,.45); right: auto; left: -140px; top: -60px; width: 320px; height: 320px; }
+.bg-tb-rust.circulos::after {
+  content: ""; position: absolute; bottom: -180px; right: -120px; width: 400px; height: 400px;
+  border: 1px solid rgba(241,238,223,.45); border-radius: 50%; pointer-events: none;
+}
+.img-cover { width: 100%; height: 100%; object-fit: cover; }
+
+/* 6. HOME ---------------------------------------------------- */
+.hero { min-height: 560px; }
+.hero-texto { padding: 5rem 0; }
+.hero-texto .container-texto { max-width: 560px; }
+.hero-texto h1 { margin-bottom: 1.5rem; }
+.hero-imagen { min-height: 360px; }
+.hero-beneficios {
+  display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin-top: 2rem; padding-top: 1.5rem;
+  border-top: 1px solid var(--tb-line); font-size: .875rem; color: var(--tb-ink);
+}
+.hero-beneficios li + li { border-left: 1px solid var(--tb-line); padding-left: 1.5rem; }
+@media (max-width: 575.98px) {
+  .hero-beneficios { flex-direction: column; }
+  .hero-beneficios li + li { border-left: 0; padding-left: 0; }
+}
+.que-es-imagen { min-height: 320px; }
+.que-es-texto { padding: 4rem 0; }
+.que-es-texto .container-texto { max-width: 560px; }
+.concepto { padding: 1.25rem 0; border-top: 1px solid var(--tb-line); }
+.concepto h3 { font-size: 1.25rem; margin-bottom: .25rem; }
+.concepto p { font-size: .875rem; margin: 0; }
+.paso { border-top: 1px solid var(--tb-line); padding-top: 1.5rem; height: 100%; }
+.paso-numero { font-family: var(--tb-font-title); font-size: 2rem; color: var(--tb-rust); line-height: 1.25; display: block; margin-bottom: .5rem; }
+.paso h3 { font-size: 1.25rem; margin-bottom: .5rem; }
+.paso p { font-size: .875rem; }
+.cta-banda { padding: 5rem 0; text-align: center; position: relative; overflow: hidden; }
+.cta-banda .eyebrow { color: var(--tb-cream); opacity: .8; }
+.cta-banda h2 { color: var(--tb-cream); font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 1rem; }
+.cta-banda p { color: var(--tb-cream); opacity: .9; font-family: var(--tb-font-title); font-size: 1.125rem; max-width: 560px; margin: 0 auto 2rem; }
+.cta-banda .container { position: relative; z-index: 1; }
+
+/* 7. TARJETAS DE OBRA --------------------------------------- */
+.obra-card { background: var(--tb-white); height: 100%; display: flex; flex-direction: column; border: 0; }
+.obra-card figure { aspect-ratio: 4 / 5; background: var(--tb-cream); overflow: hidden; }
+.obra-card img { width: 100%; height: 100%; object-fit: cover; }
+.obra-card-cuerpo { padding: 1rem; display: flex; flex-direction: column; flex: 1; }
+.obra-card h3 { font-size: 1.125rem; margin-bottom: .25rem; }
+.obra-artista { font-size: .8125rem; font-weight: 500; color: var(--tb-ink); margin-bottom: .25rem; }
+.obra-tecnica { font-size: .75rem; color: rgba(28,28,22,.6); margin-bottom: .5rem; }
+.obra-desc { font-size: .8125rem; margin-bottom: .75rem; }
+.obra-precio { font-weight: 700; font-size: .9375rem; margin-top: auto; margin-bottom: .75rem; color: var(--tb-ink); }
+.obra-card .btn { width: 100%; }
+.filtros { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
+.filtro {
+  border: 1px solid var(--tb-ink); background: transparent; color: var(--tb-ink);
+  border-radius: 999px; padding: .25rem 1rem; font-size: .8125rem; cursor: pointer;
+}
+.filtro:hover { background: rgba(28,28,22,.08); }
+.filtro.activo { background: var(--tb-ink); color: var(--tb-cream); }
+.contador-obras { margin-left: auto; font-size: .8125rem; color: rgba(28,28,22,.6); }
+
+/* 8. QUIÉNES SOMOS ------------------------------------------ */
+.page-hero { padding: 6rem 0 5rem; position: relative; overflow: hidden; }
+.page-hero .container-texto { max-width: 720px; }
+.page-hero h1 { margin-bottom: 1.5rem; }
+.valor { border-top: 1px solid var(--tb-line); padding-top: 1.5rem; height: 100%; }
+.valor-numero { font-family: var(--tb-font-title); font-size: 1.75rem; color: var(--tb-rust); display: block; margin-bottom: .5rem; }
+.valor h3 { font-size: 1.125rem; margin-bottom: .5rem; }
+.valor p { font-size: .875rem; }
+.publico-card { background: var(--tb-cream); height: 100%; }
+.publico-card figure { aspect-ratio: 16 / 9; overflow: hidden; }
+.publico-card img { width: 100%; height: 100%; object-fit: cover; }
+.publico-card-cuerpo { padding: 2rem; }
+.publico-card h3 { font-size: 1.375rem; margin-bottom: .75rem; }
+.lista-puntos li { position: relative; padding-left: 1.25rem; font-size: .875rem; margin-bottom: .5rem; color: var(--tb-muted); }
+.lista-puntos li::before { content: ""; position: absolute; left: 0; top: .55em; width: 6px; height: 6px; border-radius: 50%; background: var(--tb-rust); }
+
+/* 9. SERVICIOS ---------------------------------------------- */
+.servicio-card { background: var(--tb-white); padding: 2rem; height: 100%; }
+.servicio-icono {
+  width: 48px; height: 48px; border: 1px solid var(--tb-rust); border-radius: 50%;
+  display: grid; place-items: center; color: var(--tb-rust); margin-bottom: 1.5rem;
+}
+.servicio-icono svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.servicio-card h3 { font-size: 1.125rem; margin-bottom: .5rem; }
+.servicio-card p { font-size: .875rem; margin-bottom: 1rem; }
+/* Acordeón de preguntas frecuentes (override de .accordion) */
+.accordion {
+  --bs-accordion-bg: transparent; --bs-accordion-border-color: var(--tb-line);
+  --bs-accordion-border-radius: 0; --bs-accordion-inner-border-radius: 0;
+  --bs-accordion-btn-bg: transparent; --bs-accordion-active-bg: transparent;
+  --bs-accordion-active-color: var(--tb-ink); --bs-accordion-btn-color: var(--tb-ink);
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 .2rem var(--bs-focus-ring-color);
+  --bs-accordion-btn-padding-y: 1.25rem; --bs-accordion-btn-padding-x: 0; --bs-accordion-body-padding-x: 0;
+}
+.accordion-item { border-left: 0; border-right: 0; }
+.accordion-button { font-family: var(--tb-font-title); font-size: 1.125rem; font-weight: 600; box-shadow: none; }
+.accordion-button:not(.collapsed) { box-shadow: none; }
+.accordion-body p { font-size: .875rem; }
+
+/* 10. CONTACTO ---------------------------------------------- */
+.dato-contacto { padding: 1rem 0; border-top: 1px solid var(--tb-line); display: flex; gap: 1rem; }
+.dato-contacto .servicio-icono { width: 24px; height: 24px; border: 0; margin: 0; flex: none; }
+.dato-label { display: block; font-size: .6875rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(28,28,22,.6); }
+.dato-valor { font-family: var(--tb-font-title); font-size: 1.0625rem; color: var(--tb-ink); }
+.form-visita { background: var(--tb-white); padding: 2.5rem; }
+.form-visita h2 { font-size: 1.5rem; margin-bottom: .5rem; }
+@media (max-width: 575.98px) { .form-visita { padding: 1.5rem; } }
+.form-label { font-size: .8125rem; font-weight: 500; margin-bottom: .375rem; color: var(--tb-ink); }
+.form-control, .form-select {
+  border-color: var(--tb-ink); font-size: .875rem; padding: .625rem .875rem;
+  background-color: var(--tb-white); color: var(--tb-ink);
+}
+.form-control::placeholder { color: rgba(28,28,22,.45); }
+.form-control:focus, .form-select:focus { border-color: var(--tb-rust); box-shadow: 0 0 0 .2rem var(--bs-focus-ring-color); }
+.form-check-input:checked { background-color: var(--tb-rust); border-color: var(--tb-rust); }
+.form-check-input:focus { border-color: var(--tb-rust); box-shadow: 0 0 0 .2rem var(--bs-focus-ring-color); }
+.form-check-label { font-size: .8125rem; }
+.media-card h3 { font-size: 1.25rem; margin: 1.25rem 0 .5rem; }
+.media-card p { font-size: .875rem; }
+.ratio iframe { border: 0; }
+
+/* 11. FOOTER ------------------------------------------------- */
+.site-footer { background: var(--tb-ink); color: var(--tb-cream); padding: 4rem 0 2rem; }
+.site-footer p, .site-footer li, .site-footer a { color: rgba(241,238,223,.85); font-size: .8125rem; }
+.site-footer a:hover { color: #fff; text-decoration: underline; }
+.footer-marca { font-weight: 900; font-size: 1.5rem; letter-spacing: .12em; color: var(--tb-cream); display: block; margin-bottom: 1rem; }
+.footer-texto { font-family: var(--tb-font-title); font-size: 1.0625rem !important; line-height: 1.6; max-width: 320px; }
+.footer-titulo { font-size: .6875rem; letter-spacing: .14em; text-transform: uppercase; color: var(--tb-sand); margin-bottom: 1rem; display: block; }
+.site-footer li { margin-bottom: .75rem; }
+.footer-base { border-top: 1px solid rgba(241,238,223,.16); margin-top: 3rem; padding-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+.footer-base p, .footer-base a { font-size: .75rem; color: rgba(241,238,223,.6); }
+.footer-base a { color: var(--tb-cream); margin-left: 1rem; }
+
+/* 12. ALINEACIÓN CON EL CONTAINER EN SECCIONES A SANGRE ----- */
+/* El texto de las secciones partidas (imagen a sangre + texto) se alinea con el container de Bootstrap */
+:root { --tb-gutter: max(1rem, calc((100vw - 1320px) / 2 + .75rem)); }
+.hero-texto, .que-es-texto--izq { padding-left: var(--tb-gutter); padding-right: 1rem; }
+.que-es-texto { padding-left: 1rem; padding-right: var(--tb-gutter); }
+@media (min-width: 992px) {
+  .hero-texto { padding-right: 4rem; }
+  .que-es-texto { padding-left: 4rem; }
+}
+.hero-imagen img, .que-es-imagen img { position: absolute; inset: 0; }
+.hero-imagen, .que-es-imagen { position: relative; }
+/* Mapa y video con proporción propia */
+.mapa-card iframe, .video-card iframe { width: 100%; height: 100%; }
+
+/* 13. CARRITO ------------------------------------------------ */
+/* Ícono del header con el número de obras */
+.carrito-link { position: relative; display: inline-flex; align-items: center; color: var(--tb-ink); padding: .5rem; }
+.carrito-link:hover { color: var(--tb-rust); }
+.carrito-link svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.carrito-cantidad {
+  position: absolute; top: 0; right: -2px; min-width: 18px; height: 18px; padding: 0 5px;
+  border-radius: 999px; background: var(--tb-rust); color: #fff;
+  font-size: .6875rem; font-weight: 700; line-height: 18px; text-align: center;
+}
+/* Obras dentro del carrito */
+.carrito-item { display: flex; gap: 1.5rem; align-items: center; background: var(--tb-white); padding: 1rem; margin-bottom: 1rem; }
+.carrito-item img { width: 96px; height: 120px; object-fit: cover; flex: none; }
+.carrito-item-info { flex: 1; min-width: 0; }
+.carrito-item-info h3 { font-size: 1.125rem; margin-bottom: .25rem; }
+.carrito-item-info .obra-tecnica { margin: 0; }
+.carrito-item-precio { text-align: right; }
+.carrito-item-precio .obra-precio { margin: 0 0 .5rem; }
+.btn-quitar { background: none; border: 0; padding: 0; font-size: .8125rem; color: var(--tb-rust); text-decoration: underline; cursor: pointer; }
+.btn-quitar:hover { color: var(--tb-rust-dark); }
+@media (max-width: 575.98px) {
+  .carrito-item { flex-wrap: wrap; gap: 1rem; }
+  .carrito-item img { width: 72px; height: 96px; }
+  .carrito-item-precio { width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: left; }
+  .carrito-item-precio .obra-precio { margin: 0; }
+}
+.carrito-vacio { background: var(--tb-white); padding: 3rem 2rem; text-align: center; }
+.carrito-vacio h3 { margin-bottom: .5rem; }
+.carrito-vacio p { margin-bottom: 1.5rem; }
+/* Resumen de la compra */
+.carrito-resumen { background: var(--tb-white); padding: 2rem; position: sticky; top: 6rem; }
+.carrito-resumen h2 { font-size: 1.5rem; margin-bottom: 1.5rem; }
+.carrito-resumen-fila { display: flex; justify-content: space-between; padding: .75rem 0; border-top: 1px solid var(--tb-line); font-size: .9375rem; }
+.carrito-resumen-total { font-weight: 700; font-size: 1.125rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--tb-line); }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+/* Botones deshabilitados con la paleta de Tabula (en vez del azul de Bootstrap) */
+.btn-primary { --bs-btn-disabled-bg: var(--tb-rust); --bs-btn-disabled-border-color: var(--tb-rust); --bs-btn-disabled-color: #fff; }
+.btn-outline-dark { --bs-btn-disabled-color: var(--tb-ink); --bs-btn-disabled-border-color: var(--tb-ink); }
+
+/* 14. PANEL DEL CARRITO (offcanvas de Bootstrap, solo en productos.html) */
+button.carrito-link { background: none; border: 0; }
+.offcanvas { --bs-offcanvas-bg: var(--tb-cream); --bs-offcanvas-width: 420px; }
+.offcanvas-title { font-family: var(--tb-font-title); font-size: 1.5rem; }
+.carrito-pie { padding: 1.5rem; background: var(--tb-white); border-top: 1px solid var(--tb-line); }
+.carrito-pie .carrito-resumen-total { margin-bottom: 1rem; }
+.offcanvas .carrito-item { flex-wrap: wrap; gap: 1rem; }
+.offcanvas .carrito-item img { width: 72px; height: 96px; }
+.offcanvas .carrito-item-precio { width: 100%; display: flex; justify-content: space-between; align-items: center; text-align: left; }
+.offcanvas .carrito-item-precio .obra-precio { margin: 0; }
+
+/* Créditos del trabajo en el footer */
+.footer-credito { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(241,238,223,.16); max-width: 320px; font-size: .75rem !important; line-height: 1.6; color: rgba(241,238,223,.6) !important; }

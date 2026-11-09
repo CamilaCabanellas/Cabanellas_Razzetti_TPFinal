@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto de Tabula</title>
+  <meta name="description" content="Escribinos y coordinamos un horario para recorrer la galería con un asesor. Gorriti 4800, Palermo.">
+
+  <!-- Tipografías: DM Sans (texto) + EB Garamond (títulos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 + estilos propios (van después para pisar los valores por defecto) -->
+  <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- HEADER / NAVEGACIÓN -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">TABULA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="quienes-somos.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="productos.html">Obras</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a></li>
+          </ul>
+          <a class="btn btn-primary" href="contacto.html">Agendar visita</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Encabezado -->
+    <section class="page-hero bg-tb-cream circulos pb-4">
+      <div class="container">
+        <div class="container-texto">
+          <span class="eyebrow">Contacto</span>
+          <h1>Agendá tu visita</h1>
+          <p class="lead">Escribinos y coordinamos un horario para recorrer la galería con un asesor.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Datos + formulario -->
+    <section class="seccion bg-tb-cream pt-4">
+      <div class="container">
+        <div class="row gy-5 gx-lg-5">
+          <div class="col-lg-5">
+            <span class="eyebrow">Dónde estamos</span>
+            <h2 class="mb-4">Visitanos en Palermo</h2>
+            <div class="dato-contacto"><span class="servicio-icono"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><span class="dato-label">Dirección</span><span class="dato-valor">Gorriti 4800, Palermo, Buenos Aires</span></div></div>
+            <div class="dato-contacto"><span class="servicio-icono"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><div><span class="dato-label">Horarios de visita</span><span class="dato-valor">Martes a sábado, de 11 a 19 h, con reserva previa</span></div></div>
+            <div class="dato-contacto"><span class="servicio-icono"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span><div><span class="dato-label">Teléfono / WhatsApp</span><a class="dato-valor" href="tel:+541155550123">+54 11 5555 0123</a></div></div>
+            <div class="dato-contacto"><span class="servicio-icono"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span><div><span class="dato-label">E-mail</span><a class="dato-valor" href="mailto:hola@tabulagaleria.com">hola@tabulagaleria.com</a></div></div>
+            <!-- Botón mailto con mensaje predefinido -->
+            <a class="btn btn-outline-dark mt-3" href="mailto:hola@tabulagaleria.com?subject=Quiero%20agendar%20una%20visita&body=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20visita%20privada%20a%20la%20galer%C3%ADa.%20Mis%20datos%20son%3A%0A%0ANombre%3A%20%0ATel%C3%A9fono%3A%20%0AD%C3%ADa%20y%20horario%20preferido%3A%20">Escribinos un e-mail</a>
+            <p class="small mt-3">Respondemos en menos de 24 horas hábiles.</p>
+          </div>
+
+          <div class="col-lg-7">
+            <!-- Formulario Bootstrap (sin validación JS todavía) -->
+            <form class="form-visita" action="#" method="post">
+              <h2>Solicitá tu visita privada</h2>
+              <p class="mb-4">Completá el formulario y te confirmamos el horario por e-mail.</p>
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre y apellido</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ana Pérez" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="nombre@mail.com" required>
+              </div>
+              <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono (opcional)</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="+54 11 0000 0000">
+              </div>
+              <div class="row g-3 mb-3">
+                <div class="col-sm-6">
+                  <label for="fecha" class="form-label">Fecha preferida</label>
+                  <input type="date" class="form-control" id="fecha" name="fecha">
+                </div>
+                <div class="col-sm-6">
+                  <label for="horario" class="form-label">Horario</label>
+                  <select class="form-select" id="horario" name="horario">
+                    <option value="" selected>Elegí un horario</option>
+                    <option>11:00</option><option>12:00</option><option>13:00</option><option>15:00</option><option>16:00</option><option>17:00</option><option>18:00</option>
+                  </select>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="obra" class="form-label">Obra de interés</label>
+                <select class="form-select" id="obra" name="obra">
+                  <option value="" selected>Todavía no elegí</option>
+                  <option>Horizonte en ocre · Lucía Ferrante</option>
+                  <option>Casa sin ventanas · Tomás Aguirre</option>
+                  <option>Sedimento III · Valentina Ruiz</option>
+                  <option>Interior con luz · Mateo Benítez</option>
+                  <option>Raíz · Julia Mansilla</option>
+                  <option>Patio de Gorriti · Nicolás Pereyra</option>
+                  <option>Marea baja · Lucía Ferrante</option>
+                  <option>Umbral · Tomás Aguirre</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Contanos qué estás buscando o qué espacio querés decorar."></textarea>
+              </div>
+              <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" id="novedades" name="novedades" checked>
+                <label class="form-check-label" for="novedades">Quiero recibir novedades de muestras y obras nuevas.</label>
+              </div>
+              <button type="submit" class="btn btn-primary w-100 py-2">Solicitar visita</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cómo llegar: mapa + video -->
+    <section class="seccion bg-tb-white">
+      <div class="container">
+        <div class="mb-5">
+          <span class="eyebrow">Cómo llegar</span>
+          <h2 id="llegar-titulo">Te esperamos en la galería</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 media-card">
+            <!-- Google Maps (iframe) -->
+            <div class="ratio ratio-16x9 mapa-card">
+              <iframe src="https://www.google.com/maps?q=Gorriti+4800,+Palermo,+Buenos+Aires&amp;output=embed" title="Mapa con la ubicación de la galería Tabula en Gorriti 4800, Palermo" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            </div>
+            <h3>Dónde estamos</h3>
+            <p>A dos cuadras de Plaza Serrano. Subte D, estación Plaza Italia, o colectivos 15, 55 y 110.</p>
+          </div>
+          <div class="col-md-6 media-card">
+            <!-- Video de YouTube (iframe) -->
+            <div class="ratio ratio-16x9 video-card">
+              <iframe src="https://www.youtube.com/embed/ES6Z-uMrpOI" title="Recorrido por la galería Tabula" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <h3>Conocé Tabula</h3>
+            <p>Un recorrido de dos minutos por la sala y el taller, para que sepas qué te espera.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row gy-5 gx-lg-5">
+        <div class="col-lg-6">
+          <span class="footer-marca">TABULA</span>
+          <p class="footer-texto">Una galería de arte contemporáneo que acerca la experiencia de ver y comprar arte a nuevos coleccionistas.</p>
+          <p class="footer-credito">Camila Cabanellas y Ana Clara Razzetti<br>Trabajo educativo realizado para ORT</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <span class="footer-titulo">Navegación</span>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="quienes-somos.html">Nosotros</a></li>
+            <li><a href="productos.html">Obras</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <span class="footer-titulo">Contacto</span>
+          <ul>
+            <li>Gorriti 4800, Palermo, Buenos Aires</li>
+            <li>Martes a sábado, de 11 a 19 h (con reserva previa)</li>
+            <li><a href="tel:+541155550123">+54 11 5555 0123</a></li>
+            <li><a href="mailto:hola@tabulagaleria.com">hola@tabulagaleria.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>© 2026 Tabula · Galería de arte contemporáneo</p>
+        <div>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.pinterest.com/" target="_blank" rel="noopener">Pinterest</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

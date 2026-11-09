@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tabula. Galería de arte contemporáneo en Palermo</title>
+  <meta name="description" content="Galería de arte contemporáneo con visitas privadas y asesoramiento personalizado. Conocé las obras, sus precios y reservá tu horario.">
+
+  <!-- Tipografías: DM Sans (texto) + EB Garamond (títulos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 + estilos propios (van después para pisar los valores por defecto) -->
+  <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- HEADER / NAVEGACIÓN -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">TABULA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="quienes-somos.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="productos.html">Obras</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+          <a class="btn btn-primary" href="contacto.html">Agendar visita</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- 01 HERO -->
+    <section class="hero bg-tb-cream">
+      <div class="row g-0">
+        <div class="col-lg-6 hero-imagen order-first order-lg-last">
+          <img class="img-cover" src="img/web/hero.jpg" alt="Una visitante mira una obra en una sala luminosa de la galería" fetchpriority="high">
+        </div>
+        <div class="col-lg-6 hero-texto d-flex align-items-center">
+          <div class="container-texto">
+            <span class="eyebrow">Galería de arte contemporáneo</span>
+            <h1 id="hero-titulo">Arte contemporáneo, de cerca.</h1>
+            <p class="lead mb-4">Visitas privadas con asesoramiento personalizado. Conocé las obras, sus precios y reservá tu horario sin apuro.</p>
+            <div class="d-flex flex-wrap gap-3">
+              <a class="btn btn-primary" href="productos.html">Ver obras</a>
+              <a class="btn btn-outline-dark" href="contacto.html">Agendar visita</a>
+            </div>
+            <ul class="hero-beneficios">
+              <li>Precios a la vista</li>
+              <li>Certificado de autenticidad</li>
+              <li>Envío y montaje</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 · QUÉ ES TABULA -->
+    <section class="bg-tb-white">
+      <div class="row g-0">
+        <div class="col-lg-6 que-es-imagen">
+          <img class="img-cover" src="img/web/lugar.jpg" alt="Fachada de la galería Tabula en una esquina de Palermo, con vidriera y puerta de madera" loading="lazy">
+        </div>
+        <div class="col-lg-6 que-es-texto d-flex align-items-center">
+          <div class="container-texto">
+            <span class="eyebrow">Qué es Tabula</span>
+            <h2 id="que-es-titulo" class="mb-3">Donde el arte encuentra su soporte</h2>
+            <p class="mb-4">Tabula es una galería de arte contemporáneo que acerca la experiencia de ver y comprar arte a nuevos coleccionistas. Sin apuro y sin tecnicismos: te recibimos en una visita privada y te acompañamos en cada paso.</p>
+            <div class="concepto"><h3>Soporte</h3><p>Sostenemos a los artistas y a quienes empiezan a coleccionar.</p></div>
+            <div class="concepto"><h3>Cercanía</h3><p>Trato personal, de uno a uno. Una visita es una experiencia.</p></div>
+            <div class="concepto"><h3>Calidad</h3><p>Obras con certificado, fichas claras y precios a la vista.</p></div>
+            <a class="link-flecha d-inline-block mt-3" href="quienes-somos.html">Conocé nuestra historia →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 OBRAS DESTACADAS -->
+    <section class="seccion bg-tb-cream circulos">
+      <div class="container">
+        <div class="seccion-cabecera">
+          <div>
+            <span class="eyebrow">Obras destacadas</span>
+            <h2 id="destacadas-titulo">Piezas para empezar tu colección</h2>
+          </div>
+          <a class="link-flecha" href="productos.html">Ver todas las obras →</a>
+        </div>
+        <div class="row g-3 g-lg-4">
+        <div class="col-6 col-lg-3">
+          <article class="obra-card">
+            <figure><img src="img/web/ocre.png" alt="Pintura abstracta de paisaje en tonos ocre y terracota, enmarcada en madera" loading="lazy"></figure>
+            <div class="obra-card-cuerpo">
+              <h3>Horizonte en ocre</h3>
+              <p class="obra-artista">Lucía Ferrante</p>
+              <p class="obra-tecnica">Óleo sobre lienzo · 80 × 100 cm · 2024</p>
+              <p class="obra-desc">Capas de ocre y tierra que evocan la llanura al atardecer.</p>
+              <p class="obra-precio">$ 480.000</p>
+              <a class="btn btn-outline-dark" href="productos.html">Ver obra</a>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-lg-3">
+          <article class="obra-card">
+            <figure><img src="img/web/sinventanas.jpg" alt="Pintura de un volumen de hormigón sobre fondo negro, con marco negro" loading="lazy"></figure>
+            <div class="obra-card-cuerpo">
+              <h3>Casa sin ventanas</h3>
+              <p class="obra-artista">Tomás Aguirre</p>
+              <p class="obra-tecnica">Acrílico sobre tela · 60 × 80 cm · 2023</p>
+              <p class="obra-desc">Una arquitectura cerrada que invita a imaginar lo que pasa adentro.</p>
+              <p class="obra-precio">$ 620.000</p>
+              <a class="btn btn-outline-dark" href="productos.html">Ver obra</a>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-lg-3">
+          <article class="obra-card">
+            <figure><img src="img/web/sedimientos.jpg" alt="Obra de textura rugosa en tonos tierra, óxido y gris" loading="lazy"></figure>
+            <div class="obra-card-cuerpo">
+              <h3>Sedimento III</h3>
+              <p class="obra-artista">Valentina Ruiz</p>
+              <p class="obra-tecnica">Técnica mixta sobre madera · 50 × 50 cm · 2025</p>
+              <p class="obra-desc">Arena, pigmento y resina sobre tabla: el tiempo hecho materia.</p>
+              <p class="obra-precio">$ 350.000</p>
+              <a class="btn btn-outline-dark" href="productos.html">Ver obra</a>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-lg-3">
+          <article class="obra-card">
+            <figure><img src="img/web/interior.jpg" alt="Pintura de una habitación vacía con luz dorada entrando por la ventana" loading="lazy"></figure>
+            <div class="obra-card-cuerpo">
+              <h3>Interior con luz</h3>
+              <p class="obra-artista">Mateo Benítez</p>
+              <p class="obra-tecnica">Óleo sobre lino · 70 × 90 cm · 2024</p>
+              <p class="obra-desc">Un ambiente doméstico atravesado por la luz de la tarde.</p>
+              <p class="obra-precio">$ 890.000</p>
+              <a class="btn btn-outline-dark" href="productos.html">Ver obra</a>
+            </div>
+          </article>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 CÓMO ES TU VISITA -->
+    <section class="seccion bg-tb-white">
+      <div class="container">
+        <div class="seccion-cabecera">
+          <div>
+            <span class="eyebrow">Cómo es tu visita</span>
+            <h2 id="visita-titulo">Un recorrido pensado para vos</h2>
+          </div>
+          <a class="link-flecha" href="servicios.html">Ver todos los servicios →</a>
+        </div>
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-3"><div class="paso"><span class="paso-numero">01</span><h3>Elegí las obras</h3><p>Mirá el catálogo con precios a la vista y sumá las piezas que te interesen a tu visita.</p></div></div>
+          <div class="col-sm-6 col-lg-3"><div class="paso"><span class="paso-numero">02</span><h3>Reservá tu horario</h3><p>Agendá un día y una hora para una visita privada, de uno a uno.</p></div></div>
+          <div class="col-sm-6 col-lg-3"><div class="paso"><span class="paso-numero">03</span><h3>Te recibe un asesor</h3><p>Te cuenta la obra, el artista y su proceso, sin apuro ni tecnicismos.</p></div></div>
+          <div class="col-sm-6 col-lg-3"><div class="paso"><span class="paso-numero">04</span><h3>Envío y montaje</h3><p>Coordinamos el certificado de autenticidad, el envío y la colocación en tu espacio.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banda bg-tb-rust circulos">
+      <div class="container">
+        <span class="eyebrow">Reservá tu visita</span>
+        <h2>Agendá tu visita privada</h2>
+        <p>Elegí un horario y un asesor te recibe en la galería. También podés escribirnos y coordinamos por e-mail.</p>
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+          <a class="btn btn-cream" href="contacto.html">Agendar visita</a>
+          <a class="btn btn-outline-cream" href="mailto:hola@tabulagaleria.com?subject=Quiero%20agendar%20una%20visita&body=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20visita%20privada%20a%20la%20galer%C3%ADa.%20Mis%20datos%20son%3A%0A%0ANombre%3A%20%0ATel%C3%A9fono%3A%20%0AD%C3%ADa%20y%20horario%20preferido%3A%20">Enviar un e-mail</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row gy-5 gx-lg-5">
+        <div class="col-lg-6">
+          <span class="footer-marca">TABULA</span>
+          <p class="footer-texto">Una galería de arte contemporáneo que acerca la experiencia de ver y comprar arte a nuevos coleccionistas.</p>
+          <p class="footer-credito">Camila Cabanellas y Ana Clara Razzetti<br>Trabajo educativo realizado para ORT</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <span class="footer-titulo">Navegación</span>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="quienes-somos.html">Nosotros</a></li>
+            <li><a href="productos.html">Obras</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <span class="footer-titulo">Contacto</span>
+          <ul>
+            <li>Gorriti 4800, Palermo, Buenos Aires</li>
+            <li>Martes a sábado, de 11 a 19 h (con reserva previa)</li>
+            <li><a href="tel:+541155550123">+54 11 5555 0123</a></li>
+            <li><a href="mailto:hola@tabulagaleria.com">hola@tabulagaleria.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>© 2026 Tabula · Galería de arte contemporáneo</p>
+        <div>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.pinterest.com/" target="_blank" rel="noopener">Pinterest</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

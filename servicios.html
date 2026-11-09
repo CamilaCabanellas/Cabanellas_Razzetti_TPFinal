@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Servicios de Tabula</title>
+  <meta name="description" content="Visita privada, asesoría, certificado de autenticidad, envío y montaje. Te acompañamos en todo el proceso.">
+
+  <!-- Tipografías: DM Sans (texto) + EB Garamond (títulos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 + estilos propios (van después para pisar los valores por defecto) -->
+  <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- HEADER / NAVEGACIÓN -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">TABULA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="quienes-somos.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="productos.html">Obras</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+          <a class="btn btn-primary" href="contacto.html">Agendar visita</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Encabezado -->
+    <section class="page-hero bg-tb-cream circulos pb-4">
+      <div class="container">
+        <div class="container-texto">
+          <span class="eyebrow">Servicios</span>
+          <h1>Te acompañamos en todo el proceso</h1>
+          <p class="lead">Desde la primera visita hasta que la obra cuelga en tu pared.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="seccion bg-tb-cream pt-4">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4"><article class="servicio-card"><span class="servicio-icono"><svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg></span><h3>Visita privada</h3><p>Un horario reservado para vos y un asesor que te cuenta cada obra, sin apuro.</p></article></div>
+          <div class="col-md-6 col-lg-4"><article class="servicio-card"><span class="servicio-icono"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.6-.8L3 21l1.9-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg></span><h3>Asesoría personalizada</h3><p>Te ayudamos a elegir según tu espacio, tu gusto y tu presupuesto.</p></article></div>
+          <div class="col-md-6 col-lg-4"><article class="servicio-card"><span class="servicio-icono"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M8.2 13.9 7 23l5-3 5 3-1.2-9.1"/></svg></span><h3>Certificado de autenticidad</h3><p>Cada obra se entrega con un certificado firmado por quien la creó.</p></article></div>
+          <div class="col-md-6 col-lg-4"><article class="servicio-card"><span class="servicio-icono"><svg viewBox="0 0 24 24"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span><h3>Envío y montaje</h3><p>Embalamos, trasladamos y colgamos la obra en tu casa u oficina.</p></article></div>
+          <div class="col-md-6 col-lg-4"><article class="servicio-card"><span class="servicio-icono"><svg viewBox="0 0 24 24"><path d="M4 21V3h10v18M14 9h6v12M2 21h20M8 7h2M8 11h2M8 15h2"/></svg></span><h3>Obra para espacios</h3><p>Selecciones curadas para empresas, hoteles y estudios de arquitectura.</p></article></div>
+          <div class="col-md-6 col-lg-4"><article class="servicio-card"><span class="servicio-icono"><svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><path d="M1 10h22"/></svg></span><h3>Pago en cuotas</h3><p>Hasta seis cuotas sin interés con tarjetas bancarias, o transferencia.</p></article></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modalidades -->
+    <section class="seccion bg-tb-white">
+      <div class="container">
+        <div class="mb-5">
+          <span class="eyebrow">Modalidades</span>
+          <h2 id="modalidades-titulo">En la galería y en tu espacio</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <article class="publico-card">
+              <figure><img src="img/web/galeria.jpg" alt="Un asesor y una visitante recorren una obra en la sala de la galería" loading="lazy"></figure>
+              <div class="publico-card-cuerpo">
+                <h3>En la galería</h3>
+                <ul class="lista-puntos"><li>Visita privada con un asesor</li><li>Recorrido por las obras disponibles</li><li>Martes a sábado, de 11 a 19 h</li></ul>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6">
+            <article class="publico-card">
+              <figure><img src="img/web/coleccion.jpg" alt="Sala de la galería con tres obras de gran formato colgadas" loading="lazy"></figure>
+              <div class="publico-card-cuerpo">
+                <h3>En tu espacio</h3>
+                <ul class="lista-puntos"><li>Envío y montaje en CABA y GBA</li><li>Visita técnica para medir y ubicar la obra</li><li>Asesoría para elegir la pieza ideal</li></ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Preguntas frecuentes -->
+    <section class="seccion bg-tb-cream">
+      <div class="container">
+        <div class="row gy-5 gx-lg-5">
+          <div class="col-lg-4">
+            <span class="eyebrow">Preguntas frecuentes</span>
+            <h2 id="faq-titulo" class="mb-3">Antes de tu primera visita</h2>
+            <p>Si tenés otra duda, escribinos y te respondemos en el día.</p>
+          </div>
+          <div class="col-lg-8">
+            <div class="accordion" id="faq">
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq0" aria-expanded="true" aria-controls="faq0">¿Necesito saber de arte para reservar una visita?</button>
+                </h3>
+                <div id="faq0" class="accordion-collapse collapse show" data-bs-parent="#faq">
+                  <div class="accordion-body px-0 pt-0"><p>No. La visita está pensada justamente para quienes empiezan: te contamos cada obra y respondemos todas tus dudas.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">¿La visita privada tiene costo?</button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faq">
+                  <div class="accordion-body px-0 pt-0"><p>No, la visita es sin cargo y sin compromiso de compra. Solo necesitamos que reserves un horario.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">¿Puedo pagar en cuotas?</button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faq">
+                  <div class="accordion-body px-0 pt-0"><p>Sí, hasta seis cuotas sin interés con tarjetas bancarias seleccionadas. También aceptamos transferencia.</p></div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">¿Hacen envíos fuera de Buenos Aires?</button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faq">
+                  <div class="accordion-body px-0 pt-0"><p>Sí, coordinamos el embalaje y el envío a todo el país. El montaje a domicilio está disponible en CABA y GBA.</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banda bg-tb-rust circulos">
+      <div class="container">
+        <span class="eyebrow">Reservá tu visita</span>
+        <h2>Empecemos por una visita</h2>
+        <p>Elegí un horario y te recibimos en la galería.</p>
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+          <a class="btn btn-cream" href="contacto.html">Agendar visita</a>
+          <a class="btn btn-outline-cream" href="mailto:hola@tabulagaleria.com?subject=Quiero%20agendar%20una%20visita&body=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20visita%20privada%20a%20la%20galer%C3%ADa.%20Mis%20datos%20son%3A%0A%0ANombre%3A%20%0ATel%C3%A9fono%3A%20%0AD%C3%ADa%20y%20horario%20preferido%3A%20">Enviar un e-mail</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row gy-5 gx-lg-5">
+        <div class="col-lg-6">
+          <span class="footer-marca">TABULA</span>
+          <p class="footer-texto">Una galería de arte contemporáneo que acerca la experiencia de ver y comprar arte a nuevos coleccionistas.</p>
+          <p class="footer-credito">Camila Cabanellas y Ana Clara Razzetti<br>Trabajo educativo realizado para ORT</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <span class="footer-titulo">Navegación</span>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="quienes-somos.html">Nosotros</a></li>
+            <li><a href="productos.html">Obras</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <span class="footer-titulo">Contacto</span>
+          <ul>
+            <li>Gorriti 4800, Palermo, Buenos Aires</li>
+            <li>Martes a sábado, de 11 a 19 h (con reserva previa)</li>
+            <li><a href="tel:+541155550123">+54 11 5555 0123</a></li>
+            <li><a href="mailto:hola@tabulagaleria.com">hola@tabulagaleria.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>© 2026 Tabula · Galería de arte contemporáneo</p>
+        <div>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.pinterest.com/" target="_blank" rel="noopener">Pinterest</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

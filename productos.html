@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Obras de Tabula</title>
+  <meta name="description" content="Pinturas, esculturas, fotografías y obra gráfica con precios a la vista. Sumá las que te interesen a tu visita.">
+
+  <!-- Tipografías: DM Sans (texto) y EB Garamond (títulos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 + estilos propios (van después para pisar los valores por defecto) -->
+  <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- HEADER / NAVEGACIÓN -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">TABULA</a>
+        <!-- Carrito: abre el panel lateral. El número lo actualiza js/carrito.js -->
+        <button type="button" class="carrito-link order-lg-3 ms-auto ms-lg-3 me-3 me-lg-0" data-bs-toggle="offcanvas" data-bs-target="#panel-carrito" aria-controls="panel-carrito" aria-label="Abrir carrito">
+          <svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="carrito-cantidad d-none" id="carrito-cantidad">0</span>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="quienes-somos.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="productos.html">Obras</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+          <a class="btn btn-primary" href="contacto.html">Agendar visita</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Encabezado + filtros -->
+    <section class="page-hero bg-tb-cream circulos pb-4">
+      <div class="container">
+        <div class="container-texto">
+          <span class="eyebrow">Obras disponibles</span>
+          <h1>Obras para empezar tu colección</h1>
+          <p class="lead mb-4">Precios visibles y visita privada para ver cada pieza en persona. Sumá las que te interesen a tu visita.</p>
+        </div>
+        <div class="filtros">
+          <button type="button" class="filtro activo" data-filtro="todas">Todas</button>
+          <button type="button" class="filtro" data-filtro="pintura">Pintura</button>
+          <button type="button" class="filtro" data-filtro="escultura">Escultura</button>
+          <button type="button" class="filtro" data-filtro="fotografia">Fotografía</button>
+          <button type="button" class="filtro" data-filtro="grafica">Obra gráfica</button>
+          <span class="contador-obras" id="contador-obras">8 obras</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grilla de obras -->
+    <section class="seccion bg-tb-cream pt-4">
+      <div class="container">
+        <div class="row g-3 g-lg-4" id="grilla-obras">
+          <!-- Las tarjetas se generan con JavaScript a partir del array de js/productos.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banda bg-tb-rust circulos">
+      <div class="container">
+        <span class="eyebrow">Te ayudamos</span>
+        <h2>¿No encontrás lo que buscás?</h2>
+        <p>Contanos qué estás buscando y te recomendamos obras para tu espacio.</p>
+        <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+          <a class="btn btn-cream" href="contacto.html">Agendar visita</a>
+          <a class="btn btn-outline-cream" href="mailto:hola@tabulagaleria.com?subject=Quiero%20agendar%20una%20visita&body=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20visita%20privada%20a%20la%20galer%C3%ADa.%20Mis%20datos%20son%3A%0A%0ANombre%3A%20%0ATel%C3%A9fono%3A%20%0AD%C3%ADa%20y%20horario%20preferido%3A%20">Enviar un e-mail</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row gy-5 gx-lg-5">
+        <div class="col-lg-6">
+          <span class="footer-marca">TABULA</span>
+          <p class="footer-texto">Una galería de arte contemporáneo que acerca la experiencia de ver y comprar arte a nuevos coleccionistas.</p>
+          <p class="footer-credito">Camila Cabanellas y Ana Clara Razzetti<br>Trabajo educativo realizado para ORT</p>
+        </div>
+        <div class="col-6 col-lg-3">
+          <span class="footer-titulo">Navegación</span>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="quienes-somos.html">Nosotros</a></li>
+            <li><a href="productos.html">Obras</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <span class="footer-titulo">Contacto</span>
+          <ul>
+            <li>Gorriti 4800, Palermo, Buenos Aires</li>
+            <li>Martes a sábado, de 11 a 19 h (con reserva previa)</li>
+            <li><a href="tel:+541155550123">+54 11 5555 0123</a></li>
+            <li><a href="mailto:hola@tabulagaleria.com">hola@tabulagaleria.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>© 2026 Tabula · Galería de arte contemporáneo</p>
+        <div>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.pinterest.com/" target="_blank" rel="noopener">Pinterest</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Panel del carrito (se abre con el ícono del header) -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="panel-carrito" aria-labelledby="panel-carrito-titulo">
+    <div class="offcanvas-header">
+      <h2 class="offcanvas-title" id="panel-carrito-titulo">Tu carrito</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body">
+      <!-- La lista de obras la dibuja js/carrito.js -->
+      <div id="carrito-lista"></div>
+    </div>
+    <div class="carrito-pie">
+      <div class="carrito-resumen-fila"><span>Obras</span><span id="carrito-resumen-cantidad">0 obras</span></div>
+      <div class="carrito-resumen-fila carrito-resumen-total"><span>Total</span><span id="carrito-total">$ 0</span></div>
+      <!-- El checkout se arma en el próximo paso -->
+      <button type="button" class="btn btn-primary w-100 mb-2" id="btn-finalizar" disabled>Finalizar compra</button>
+      <button type="button" class="btn btn-outline-dark w-100" id="btn-vaciar">Vaciar carrito</button>
+    </div>
+  </div>
+
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery + plugin Isotope (filtro de obras) -->
+  <script src="assets/jquery/jquery.min.js"></script>
+  <script src="assets/isotope/isotope.pkgd.min.js"></script>
+  <script src="js/productos.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/carrito.js"></script>
+</body>
+</html>

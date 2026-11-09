@@ -1,0 +1,12 @@
+/* TEAM */
+Alumna: Camila Cabanellas
+Rol: Integrante del equipo
+
+Alumna: Ana Clara Razzetti
+Rol: Integrante del equipo
+
+/* PROYECTO */
+Sitio: Tabula. Galería de arte contemporáneo
+Materias: Desarrollo II + Programación I
+Institución: ORT Argentina
+Entrega Final
