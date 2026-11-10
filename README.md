@@ -32,7 +32,7 @@ Las librerías están guardadas en la carpeta `assets/`.
 ```
 assets/   librerías (Bootstrap, jQuery, Isotope)
 css/      styles.css (estilos propios que pisan a Bootstrap)
-js/       main.js, productos.js, carrito.js
+js/       main.js, productos.js, carrito.js, formulario.js
 img/web/  imágenes optimizadas para la web
 ```
 

@@ -125,6 +125,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
   font-family: var(--tb-font-text); font-weight: 900; font-size: 1.25rem;
   letter-spacing: .12em; color: var(--tb-ink);
 }
+.navbar-brand img { display: block; height: 2rem; width: auto; }
 .navbar-nav .nav-link {
   --bs-nav-link-color: var(--tb-ink); --bs-nav-link-hover-color: var(--tb-rust);
   font-size: .875rem; padding: .5rem 1rem;
@@ -190,6 +191,19 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .cta-banda h2 { color: var(--tb-cream); font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 1rem; }
 .cta-banda p { color: var(--tb-cream); opacity: .9; font-family: var(--tb-font-title); font-size: 1.125rem; max-width: 560px; margin: 0 auto 2rem; }
 .cta-banda .container { position: relative; z-index: 1; }
+
+/* Testimonios: carrusel de Bootstrap con estilo propio (flechas e indicadores) */
+.testimonios { max-width: 760px; margin: 0 auto; text-align: center; }
+.testimonio { margin: 0; padding: 0 1rem; }
+.testimonio blockquote { margin: 0; }
+.testimonio blockquote p { font-family: var(--tb-font-title); font-size: clamp(1.375rem, 1rem + 1.5vw, 1.875rem); line-height: 1.4; color: var(--tb-ink); }
+.testimonio figcaption { margin-top: 1.5rem; font-size: .875rem; color: var(--tb-muted); }
+.testimonio figcaption strong { display: block; }
+.testimonios-nav { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 2.5rem; }
+.testimonios-flecha { width: 2.5rem; height: 2.5rem; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--tb-ink); border-radius: 50%; background: transparent; color: var(--tb-ink); }
+.testimonios-flecha:hover { background: var(--tb-ink); color: var(--tb-cream); }
+.testimonios .carousel-indicators { position: static; margin: 0; }
+.testimonios .carousel-indicators [data-bs-target] { background-color: var(--tb-ink); }
 
 /* 7. TARJETAS DE OBRA --------------------------------------- */
 .obra-card { background: var(--tb-white); height: 100%; display: flex; flex-direction: column; border: 0; }
@@ -268,6 +282,15 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .form-check-input:checked { background-color: var(--tb-rust); border-color: var(--tb-rust); }
 .form-check-input:focus { border-color: var(--tb-rust); box-shadow: 0 0 0 .2rem var(--bs-focus-ring-color); }
 .form-check-label { font-size: .8125rem; }
+/* Validación (Bootstrap): se pisan los colores verde/rojo con la paleta propia */
+.form-visita {
+  --bs-form-valid-color: var(--tb-ink); --bs-form-valid-border-color: var(--tb-sand);
+  --bs-form-invalid-color: #A33A2B; --bs-form-invalid-border-color: #A33A2B;
+}
+.was-validated .form-control:valid, .was-validated .form-control:invalid { background-image: none; padding-right: .75rem; }
+.was-validated .form-select:valid, .was-validated .form-select:invalid { --bs-form-select-bg-icon: none; }
+.invalid-feedback { font-size: .75rem; }
+.form-ok { margin-top: 1rem; padding: .875rem 1rem; background: var(--tb-cream); border: 1px solid var(--tb-line); font-size: .8125rem; }
 .media-card h3 { font-size: 1.25rem; margin: 1.25rem 0 .5rem; }
 .media-card p { font-size: .875rem; }
 .ratio iframe { border: 0; }
@@ -276,13 +299,17 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .site-footer { background: var(--tb-ink); color: var(--tb-cream); padding: 4rem 0 2rem; }
 .site-footer p, .site-footer li, .site-footer a { color: rgba(241,238,223,.85); font-size: .8125rem; }
 .site-footer a:hover { color: #fff; text-decoration: underline; }
-.footer-marca { font-weight: 900; font-size: 1.5rem; letter-spacing: .12em; color: var(--tb-cream); display: block; margin-bottom: 1rem; }
+/* Logo del footer: el SVG es oscuro, se invierte a claro sobre el fondo oscuro */
+.footer-logo { display: block; height: 2.25rem; width: auto; margin-bottom: 1rem; filter: brightness(0) invert(1); }
 .footer-texto { font-family: var(--tb-font-title); font-size: 1.0625rem !important; line-height: 1.6; max-width: 320px; }
 .footer-titulo { font-size: .6875rem; letter-spacing: .14em; text-transform: uppercase; color: var(--tb-sand); margin-bottom: 1rem; display: block; }
 .site-footer li { margin-bottom: .75rem; }
 .footer-base { border-top: 1px solid rgba(241,238,223,.16); margin-top: 3rem; padding-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
 .footer-base p, .footer-base a { font-size: .75rem; color: rgba(241,238,223,.6); }
 .footer-base a { color: var(--tb-cream); margin-left: 1rem; }
+.footer-redes { display: flex; gap: .75rem; }
+.footer-base .footer-redes a { margin-left: 0; display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; border: 1px solid rgba(241,238,223,.3); border-radius: 50%; }
+.footer-base .footer-redes a:hover { background: var(--tb-cream); color: var(--tb-ink); text-decoration: none; }
 
 /* 12. ALINEACIÓN CON EL CONTAINER EN SECCIONES A SANGRE ----- */
 /* El texto de las secciones partidas (imagen a sangre + texto) se alinea con el container de Bootstrap */

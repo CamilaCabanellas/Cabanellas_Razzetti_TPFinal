@@ -11,7 +11,7 @@ const productos = [
     descripcion: "Capas de ocre y tierra que evocan la llanura al atardecer.",
     precio: 480000,
     categoria: "pintura",
-    img: "ocre.png",
+    img: "ocre.jpg",
     alt: "Pintura abstracta de paisaje en tonos ocre y terracota, enmarcada en madera"
   },
   {

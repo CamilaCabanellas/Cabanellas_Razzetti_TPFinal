@@ -20,7 +20,7 @@
   <header class="site-header">
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="index.html">TABULA</a>
+        <a class="navbar-brand" href="index.html"><img src="img/web/logo.svg" alt="Tabula, ir al inicio" width="110" height="37"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -98,7 +98,7 @@
         <div class="row g-3 g-lg-4">
         <div class="col-6 col-lg-3">
           <article class="obra-card">
-            <figure><img src="img/web/ocre.png" alt="Pintura abstracta de paisaje en tonos ocre y terracota, enmarcada en madera" loading="lazy"></figure>
+            <figure><img src="img/web/ocre.jpg" alt="Pintura abstracta de paisaje en tonos ocre y terracota, enmarcada en madera" loading="lazy"></figure>
             <div class="obra-card-cuerpo">
               <h3>Horizonte en ocre</h3>
               <p class="obra-artista">Lucía Ferrante</p>
@@ -171,6 +171,43 @@
       </div>
     </section>
 
+    <!-- 05 TESTIMONIOS (carrusel de Bootstrap) -->
+    <section class="seccion bg-tb-cream">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="eyebrow">Testimonios</span>
+          <h2 id="testimonios-titulo">Lo que dicen quienes ya pasaron por Tabula</h2>
+        </div>
+        <div id="testimonios" class="carousel slide testimonios" data-bs-ride="carousel" aria-label="Testimonios de clientes, artistas y estudios">
+          <div class="carousel-inner">
+          <div class="carousel-item active">
+            <figure class="testimonio">
+              <blockquote><p>“Fui por una obra y me llevé tres. El asesor me explicó cada proceso sin apuro y el montaje en casa quedó impecable.”</p></blockquote>
+              <figcaption><strong>Marina Duarte</strong>Coleccionista</figcaption>
+            </figure>
+          </div>
+          <div class="carousel-item">
+            <figure class="testimonio">
+              <blockquote><p>“Tabula me dio un espacio cuidado para mostrar mi trabajo. Entienden al artista y también a quien se anima a comprar.”</p></blockquote>
+              <figcaption><strong>Lucía Ferrante</strong>Artista de la galería</figcaption>
+            </figure>
+          </div>
+          <div class="carousel-item">
+            <figure class="testimonio">
+              <blockquote><p>“Buscábamos piezas para nuestra oficina nueva. El asesoramiento fue claro y la entrega, puntual.”</p></blockquote>
+              <figcaption><strong>Estudio Alameda</strong>Estudio de arquitectura</figcaption>
+            </figure>
+          </div>
+          </div>
+          <div class="testimonios-nav">
+            <button class="testimonios-flecha" type="button" data-bs-target="#testimonios" data-bs-slide="prev" aria-label="Testimonio anterior"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+            <div class="carousel-indicators"><button type="button" data-bs-target="#testimonios" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Testimonio 1"></button><button type="button" data-bs-target="#testimonios" data-bs-slide-to="1" aria-label="Testimonio 2"></button><button type="button" data-bs-target="#testimonios" data-bs-slide-to="2" aria-label="Testimonio 3"></button></div>
+            <button class="testimonios-flecha" type="button" data-bs-target="#testimonios" data-bs-slide="next" aria-label="Testimonio siguiente"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA -->
     <section class="cta-banda bg-tb-rust circulos">
       <div class="container">
@@ -190,9 +227,9 @@
     <div class="container">
       <div class="row gy-5 gx-lg-5">
         <div class="col-lg-6">
-          <span class="footer-marca">TABULA</span>
+          <img class="footer-logo" src="img/web/logo.svg" alt="Tabula" width="110" height="37">
           <p class="footer-texto">Una galería de arte contemporáneo que acerca la experiencia de ver y comprar arte a nuevos coleccionistas.</p>
-          <p class="footer-credito">Camila Cabanellas y Ana Clara Razzetti<br>Trabajo educativo realizado para ORT</p>
+          <p class="footer-credito">Camila Cabanellas y Ana Clara Razzetti<br>Desarrollo II + Programación I · Curso 1º 2º A · 2026<br>Trabajo educativo realizado para ORT</p>
         </div>
         <div class="col-6 col-lg-3">
           <span class="footer-titulo">Navegación</span>
@@ -216,9 +253,10 @@
       </div>
       <div class="footer-base">
         <p>© 2026 Tabula · Galería de arte contemporáneo</p>
-        <div>
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
-          <a href="https://www.pinterest.com/" target="_blank" rel="noopener">Pinterest</a>
+        <div class="footer-redes">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg></a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
         </div>
       </div>
     </div>
