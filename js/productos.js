@@ -1,7 +1,19 @@
-/* productos.js 
-   Datos de las obras. main.js recorre este array y arma las tarjetas en productos.html.
-   Para agregar una obra: sumar un objeto nuevo al array (la categoría debe ser una de:
-   "pintura", "escultura", "fotografia" o "grafica"). */
+/* productos.js · Tabula
+   Datos de las obras. main.js recorre este array y arma las tarjetas en productos.html;
+   carrito.js lo usa para buscar el título y el precio de cada obra por su id.
+
+   Un array es una lista entre [ ]; cada obra es un objeto entre { } con estos datos:
+     id          número único de la obra (el carrito guarda solo este número)
+     titulo      nombre de la obra
+     artista     quién la hizo
+     tecnica     técnica, medidas y año
+     descripcion frase breve que se ve en la tarjeta
+     precio      número sin puntos ni signos (se muestra con formato en pesos desde JavaScript)
+     categoria   una de: "pintura", "escultura", "fotografia" o "grafica" (la usa el filtro)
+     img         nombre del archivo dentro de img/web/
+     alt         descripción de la imagen para lectores de pantalla
+
+   Para agregar una obra: sumar un objeto nuevo al final del array, con un id que no se repita. */
 const productos = [
   {
     id: 1,
@@ -90,5 +102,16 @@ const productos = [
     categoria: "pintura",
     img: "umbral.jpg",
     alt: "Pintura abstracta de formas geométricas en tonos marrón, óxido y negro"
+  },
+  {
+    id: 9,
+    titulo: "Pliegue",
+    artista: "Martina Sosa",
+    tecnica: "Cerámica esmaltada · 35 × 22 × 22 cm · 2025",
+    descripcion: "Una pieza modelada a mano que parece plegarse sobre sí misma, con esmalte mate color arcilla.",
+    precio: 540000,
+    categoria: "escultura",
+    img: "pliegue.jpg",
+    alt: "Escultura de cerámica de formas suaves y pliegues, con esmalte mate en tono arcilla"
   }
 ];

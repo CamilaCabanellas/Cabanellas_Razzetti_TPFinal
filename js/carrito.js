@@ -4,6 +4,10 @@
 
 let carrito = [];   // ids de las obras elegidas
 
+// Número de WhatsApp de la galería, con código de país y sin signos (54 = Argentina, 9 = celular).
+// Es un número de ejemplo: se cambia por el real antes de usarlo.
+const WHATSAPP_NUMERO = '5491155550123';
+
 
 /* ---------- 1. FUNCIONES DE AYUDA ---------- */
 
@@ -47,7 +51,34 @@ function vaciarCarrito() {
 }
 
 
-/* ---------- 3. LO QUE SE VE EN PANTALLA (jQuery) ---------- */
+/* ---------- 3. PEDIDO POR WHATSAPP ---------- */
+
+// Arma el texto del pedido: una línea por obra y el total al final
+function armarMensajePedido() {
+  let mensaje = 'Hola, quiero pedir estas obras de Tabula:\n';
+  let total = 0;
+
+  for (let i = 0; i < carrito.length; i++) {
+    const obra = buscarObra(carrito[i]);
+    if (obra !== null) {
+      total += obra.precio;
+      mensaje += '- ' + obra.titulo + ' (' + obra.artista + '): ' + precioEnPesos(obra.precio) + '\n';
+    }
+  }
+
+  mensaje += 'Total: ' + precioEnPesos(total);
+  return mensaje;
+}
+
+// Abre WhatsApp con el mensaje ya escrito. encodeURIComponent convierte el texto
+// (espacios, saltos de línea, acentos) para que pueda viajar dentro de la dirección.
+function pedirPorWhatsApp() {
+  const direccion = 'https://wa.me/' + WHATSAPP_NUMERO + '?text=' + encodeURIComponent(armarMensajePedido());
+  window.open(direccion, '_blank');
+}
+
+
+/* ---------- 4. LO QUE SE VE EN PANTALLA (jQuery) ---------- */
 
 // Número que aparece junto al ícono del carrito en el header
 function actualizarContador() {
@@ -117,6 +148,7 @@ function dibujarCarrito() {
   }
   $('#carrito-total').text(precioEnPesos(total));
   $('#btn-vaciar').prop('disabled', carrito.length === 0);
+  $('#btn-pedir').prop('disabled', carrito.length === 0);   // sin obras no se puede pedir
 }
 
 // Vuelve a mostrar todo lo que depende del carrito
@@ -127,7 +159,7 @@ function actualizarPantalla() {
 }
 
 
-/* ---------- 4. EVENTOS (qué pasa al hacer clic) ---------- */
+/* ---------- 5. EVENTOS (qué pasa al hacer clic) ---------- */
 /* $(function () { ... }) espera a que la página termine de cargar. */
 $(function () {
 
@@ -149,6 +181,9 @@ $(function () {
     vaciarCarrito();
     actualizarPantalla();
   });
+
+  // Botón "Pedir por WhatsApp": el pedido termina en un mensaje, no hay compra online
+  $('#btn-pedir').on('click', pedirPorWhatsApp);
 
   // Al abrir la página
   actualizarPantalla();

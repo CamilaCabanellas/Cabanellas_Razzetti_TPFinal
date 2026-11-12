@@ -297,15 +297,15 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 
 /* 11. FOOTER ------------------------------------------------- */
 .site-footer { background: var(--tb-ink); color: var(--tb-cream); padding: 4rem 0 2rem; }
-.site-footer p, .site-footer li, .site-footer a { color: rgba(241,238,223,.85); font-size: .8125rem; }
+.site-footer p, .site-footer li, .site-footer a { color: rgba(241,238,223,.85); font-size: 1rem; }
 .site-footer a:hover { color: #fff; text-decoration: underline; }
 /* Logo del footer: el SVG es oscuro, se invierte a claro sobre el fondo oscuro */
 .footer-logo { display: block; height: 2.25rem; width: auto; margin-bottom: 1rem; filter: brightness(0) invert(1); }
 .footer-texto { font-family: var(--tb-font-title); font-size: 1.0625rem !important; line-height: 1.6; max-width: 320px; }
-.footer-titulo { font-size: .6875rem; letter-spacing: .14em; text-transform: uppercase; color: var(--tb-sand); margin-bottom: 1rem; display: block; }
+.footer-titulo { font-size: 1rem; letter-spacing: .14em; text-transform: uppercase; color: var(--tb-sand); margin-bottom: 1rem; display: block; }
 .site-footer li { margin-bottom: .75rem; }
 .footer-base { border-top: 1px solid rgba(241,238,223,.16); margin-top: 3rem; padding-top: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
-.footer-base p, .footer-base a { font-size: .75rem; color: rgba(241,238,223,.6); }
+.footer-base p, .footer-base a { font-size: 1rem; color: rgba(241,238,223,.6); }
 .footer-base a { color: var(--tb-cream); margin-left: 1rem; }
 .footer-redes { display: flex; gap: .75rem; }
 .footer-base .footer-redes a { margin-left: 0; display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; border: 1px solid rgba(241,238,223,.3); border-radius: 50%; }
@@ -376,4 +376,4 @@ button.carrito-link { background: none; border: 0; }
 .offcanvas .carrito-item-precio .obra-precio { margin: 0; }
 
 /* Créditos del trabajo en el footer */
-.footer-credito { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(241,238,223,.16); max-width: 320px; font-size: .75rem !important; line-height: 1.6; color: rgba(241,238,223,.6) !important; }
+.footer-credito { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid rgba(241,238,223,.16); max-width: 320px; font-size: 1rem !important; line-height: 1.6; color: rgba(241,238,223,.6) !important; }
