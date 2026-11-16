@@ -9,4 +9,4 @@ Rol: Integrante del equipo
 Sitio: Tabula. Galería de arte contemporáneo
 Materias: Desarrollo II + Programación I
 Institución: ORT Argentina
-Entrega Final
+Etapa: Entrega final

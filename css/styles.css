@@ -84,16 +84,16 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 }
 .eyebrow {
   display: block; margin-bottom: 1rem;
-  font-size: .75rem; font-weight: 500; letter-spacing: .14em;
+  font-size: 1rem; font-weight: 500; letter-spacing: .14em;
   text-transform: uppercase; color: var(--tb-rust);
 }
-.link-flecha { font-size: .875rem; font-weight: 500; color: var(--tb-rust); }
+.link-flecha { font-size: 1rem; font-weight: 500; color: var(--tb-rust); }
 .link-flecha:hover { color: var(--tb-rust-dark); text-decoration: underline; }
 
 /* 3. BOTONES (override de .btn de Bootstrap) ---------------- */
 .btn {
   --bs-btn-border-radius: 0;
-  --bs-btn-font-size: .875rem;
+  --bs-btn-font-size: 1rem;
   --bs-btn-padding-x: 1.5rem;
   --bs-btn-padding-y: .5rem;
   font-weight: 500; line-height: 1.5;
@@ -128,7 +128,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .navbar-brand img { display: block; height: 2rem; width: auto; }
 .navbar-nav .nav-link {
   --bs-nav-link-color: var(--tb-ink); --bs-nav-link-hover-color: var(--tb-rust);
-  font-size: .875rem; padding: .5rem 1rem;
+  font-size: 1rem; padding: .5rem 1rem;
 }
 /* Página activa: se marca con .active + aria-current="page" */
 .navbar-nav .nav-link.active { font-weight: 700; color: var(--tb-ink); border-bottom: 2px solid var(--tb-rust); }
@@ -169,7 +169,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .hero-imagen { min-height: 360px; }
 .hero-beneficios {
   display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin-top: 2rem; padding-top: 1.5rem;
-  border-top: 1px solid var(--tb-line); font-size: .875rem; color: var(--tb-ink);
+  border-top: 1px solid var(--tb-line); font-size: 1rem; color: var(--tb-ink);
 }
 .hero-beneficios li + li { border-left: 1px solid var(--tb-line); padding-left: 1.5rem; }
 @media (max-width: 575.98px) {
@@ -181,11 +181,11 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .que-es-texto .container-texto { max-width: 560px; }
 .concepto { padding: 1.25rem 0; border-top: 1px solid var(--tb-line); }
 .concepto h3 { font-size: 1.25rem; margin-bottom: .25rem; }
-.concepto p { font-size: .875rem; margin: 0; }
+.concepto p { font-size: 1rem; margin: 0; }
 .paso { border-top: 1px solid var(--tb-line); padding-top: 1.5rem; height: 100%; }
 .paso-numero { font-family: var(--tb-font-title); font-size: 2rem; color: var(--tb-rust); line-height: 1.25; display: block; margin-bottom: .5rem; }
 .paso h3 { font-size: 1.25rem; margin-bottom: .5rem; }
-.paso p { font-size: .875rem; }
+.paso p { font-size: 1rem; }
 .cta-banda { padding: 5rem 0; text-align: center; position: relative; overflow: hidden; }
 .cta-banda .eyebrow { color: var(--tb-cream); opacity: .8; }
 .cta-banda h2 { color: var(--tb-cream); font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 1rem; }
@@ -197,7 +197,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .testimonio { margin: 0; padding: 0 1rem; }
 .testimonio blockquote { margin: 0; }
 .testimonio blockquote p { font-family: var(--tb-font-title); font-size: clamp(1.375rem, 1rem + 1.5vw, 1.875rem); line-height: 1.4; color: var(--tb-ink); }
-.testimonio figcaption { margin-top: 1.5rem; font-size: .875rem; color: var(--tb-muted); }
+.testimonio figcaption { margin-top: 1.5rem; font-size: 1rem; color: var(--tb-muted); }
 .testimonio figcaption strong { display: block; }
 .testimonios-nav { display: flex; align-items: center; justify-content: center; gap: 1.5rem; margin-top: 2.5rem; }
 .testimonios-flecha { width: 2.5rem; height: 2.5rem; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--tb-ink); border-radius: 50%; background: transparent; color: var(--tb-ink); }
@@ -211,19 +211,19 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .obra-card img { width: 100%; height: 100%; object-fit: cover; }
 .obra-card-cuerpo { padding: 1rem; display: flex; flex-direction: column; flex: 1; }
 .obra-card h3 { font-size: 1.125rem; margin-bottom: .25rem; }
-.obra-artista { font-size: .8125rem; font-weight: 500; color: var(--tb-ink); margin-bottom: .25rem; }
-.obra-tecnica { font-size: .75rem; color: rgba(28,28,22,.6); margin-bottom: .5rem; }
-.obra-desc { font-size: .8125rem; margin-bottom: .75rem; }
-.obra-precio { font-weight: 700; font-size: .9375rem; margin-top: auto; margin-bottom: .75rem; color: var(--tb-ink); }
+.obra-artista { font-size: 1rem; font-weight: 500; color: var(--tb-ink); margin-bottom: .25rem; }
+.obra-tecnica { font-size: 1rem; color: rgba(28,28,22,.6); margin-bottom: .5rem; }
+.obra-desc { font-size: 1rem; margin-bottom: .75rem; }
+.obra-precio { font-weight: 700; font-size: 1rem; margin-top: auto; margin-bottom: .75rem; color: var(--tb-ink); }
 .obra-card .btn { width: 100%; }
 .filtros { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
 .filtro {
   border: 1px solid var(--tb-ink); background: transparent; color: var(--tb-ink);
-  border-radius: 999px; padding: .25rem 1rem; font-size: .8125rem; cursor: pointer;
+  border-radius: 999px; padding: .25rem 1rem; font-size: 1rem; cursor: pointer;
 }
 .filtro:hover { background: rgba(28,28,22,.08); }
 .filtro.activo { background: var(--tb-ink); color: var(--tb-cream); }
-.contador-obras { margin-left: auto; font-size: .8125rem; color: rgba(28,28,22,.6); }
+.contador-obras { margin-left: auto; font-size: 1rem; color: rgba(28,28,22,.6); }
 
 /* 8. QUIÉNES SOMOS ------------------------------------------ */
 .page-hero { padding: 6rem 0 5rem; position: relative; overflow: hidden; }
@@ -232,13 +232,13 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .valor { border-top: 1px solid var(--tb-line); padding-top: 1.5rem; height: 100%; }
 .valor-numero { font-family: var(--tb-font-title); font-size: 1.75rem; color: var(--tb-rust); display: block; margin-bottom: .5rem; }
 .valor h3 { font-size: 1.125rem; margin-bottom: .5rem; }
-.valor p { font-size: .875rem; }
+.valor p { font-size: 1rem; }
 .publico-card { background: var(--tb-cream); height: 100%; }
 .publico-card figure { aspect-ratio: 16 / 9; overflow: hidden; }
 .publico-card img { width: 100%; height: 100%; object-fit: cover; }
 .publico-card-cuerpo { padding: 2rem; }
 .publico-card h3 { font-size: 1.375rem; margin-bottom: .75rem; }
-.lista-puntos li { position: relative; padding-left: 1.25rem; font-size: .875rem; margin-bottom: .5rem; color: var(--tb-muted); }
+.lista-puntos li { position: relative; padding-left: 1.25rem; font-size: 1rem; margin-bottom: .5rem; color: var(--tb-muted); }
 .lista-puntos li::before { content: ""; position: absolute; left: 0; top: .55em; width: 6px; height: 6px; border-radius: 50%; background: var(--tb-rust); }
 
 /* 9. SERVICIOS ---------------------------------------------- */
@@ -249,7 +249,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 }
 .servicio-icono svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 .servicio-card h3 { font-size: 1.125rem; margin-bottom: .5rem; }
-.servicio-card p { font-size: .875rem; margin-bottom: 1rem; }
+.servicio-card p { font-size: 1rem; margin-bottom: 1rem; }
 /* Acordeón de preguntas frecuentes (override de .accordion) */
 .accordion {
   --bs-accordion-bg: transparent; --bs-accordion-border-color: var(--tb-line);
@@ -262,26 +262,26 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .accordion-item { border-left: 0; border-right: 0; }
 .accordion-button { font-family: var(--tb-font-title); font-size: 1.125rem; font-weight: 600; box-shadow: none; }
 .accordion-button:not(.collapsed) { box-shadow: none; }
-.accordion-body p { font-size: .875rem; }
+.accordion-body p { font-size: 1rem; }
 
 /* 10. CONTACTO ---------------------------------------------- */
 .dato-contacto { padding: 1rem 0; border-top: 1px solid var(--tb-line); display: flex; gap: 1rem; }
 .dato-contacto .servicio-icono { width: 24px; height: 24px; border: 0; margin: 0; flex: none; }
-.dato-label { display: block; font-size: .6875rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(28,28,22,.6); }
+.dato-label { display: block; font-size: 1rem; letter-spacing: .12em; text-transform: uppercase; color: rgba(28,28,22,.6); }
 .dato-valor { font-family: var(--tb-font-title); font-size: 1.0625rem; color: var(--tb-ink); }
 .form-visita { background: var(--tb-white); padding: 2.5rem; }
 .form-visita h2 { font-size: 1.5rem; margin-bottom: .5rem; }
 @media (max-width: 575.98px) { .form-visita { padding: 1.5rem; } }
-.form-label { font-size: .8125rem; font-weight: 500; margin-bottom: .375rem; color: var(--tb-ink); }
+.form-label { font-size: 1rem; font-weight: 500; margin-bottom: .375rem; color: var(--tb-ink); }
 .form-control, .form-select {
-  border-color: var(--tb-ink); font-size: .875rem; padding: .625rem .875rem;
+  border-color: var(--tb-ink); font-size: 1rem; padding: .625rem .875rem;
   background-color: var(--tb-white); color: var(--tb-ink);
 }
 .form-control::placeholder { color: rgba(28,28,22,.45); }
 .form-control:focus, .form-select:focus { border-color: var(--tb-rust); box-shadow: 0 0 0 .2rem var(--bs-focus-ring-color); }
 .form-check-input:checked { background-color: var(--tb-rust); border-color: var(--tb-rust); }
 .form-check-input:focus { border-color: var(--tb-rust); box-shadow: 0 0 0 .2rem var(--bs-focus-ring-color); }
-.form-check-label { font-size: .8125rem; }
+.form-check-label { font-size: 1rem; }
 /* Validación (Bootstrap): se pisan los colores verde/rojo con la paleta propia */
 .form-visita {
   --bs-form-valid-color: var(--tb-ink); --bs-form-valid-border-color: var(--tb-sand);
@@ -289,10 +289,10 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 }
 .was-validated .form-control:valid, .was-validated .form-control:invalid { background-image: none; padding-right: .75rem; }
 .was-validated .form-select:valid, .was-validated .form-select:invalid { --bs-form-select-bg-icon: none; }
-.invalid-feedback { font-size: .75rem; }
-.form-ok { margin-top: 1rem; padding: .875rem 1rem; background: var(--tb-cream); border: 1px solid var(--tb-line); font-size: .8125rem; }
+.invalid-feedback { font-size: 1rem; }
+.form-ok { margin-top: 1rem; padding: .875rem 1rem; background: var(--tb-cream); border: 1px solid var(--tb-line); font-size: 1rem; }
 .media-card h3 { font-size: 1.25rem; margin: 1.25rem 0 .5rem; }
-.media-card p { font-size: .875rem; }
+.media-card p { font-size: 1rem; }
 .ratio iframe { border: 0; }
 
 /* 11. FOOTER ------------------------------------------------- */
@@ -331,9 +331,9 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .carrito-link:hover { color: var(--tb-rust); }
 .carrito-link svg { width: 24px; height: 24px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
 .carrito-cantidad {
-  position: absolute; top: 0; right: -2px; min-width: 18px; height: 18px; padding: 0 5px;
+  position: absolute; top: -8px; right: -10px; min-width: 24px; height: 24px; padding: 0 5px;
   border-radius: 999px; background: var(--tb-rust); color: #fff;
-  font-size: .6875rem; font-weight: 700; line-height: 18px; text-align: center;
+  font-size: 1rem; font-weight: 700; line-height: 24px; text-align: center;
 }
 /* Obras dentro del carrito */
 .carrito-item { display: flex; gap: 1.5rem; align-items: center; background: var(--tb-white); padding: 1rem; margin-bottom: 1rem; }
@@ -343,7 +343,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .carrito-item-info .obra-tecnica { margin: 0; }
 .carrito-item-precio { text-align: right; }
 .carrito-item-precio .obra-precio { margin: 0 0 .5rem; }
-.btn-quitar { background: none; border: 0; padding: 0; font-size: .8125rem; color: var(--tb-rust); text-decoration: underline; cursor: pointer; }
+.btn-quitar { background: none; border: 0; padding: 0; font-size: 1rem; color: var(--tb-rust); text-decoration: underline; cursor: pointer; }
 .btn-quitar:hover { color: var(--tb-rust-dark); }
 @media (max-width: 575.98px) {
   .carrito-item { flex-wrap: wrap; gap: 1rem; }
@@ -357,7 +357,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 /* Resumen de la compra */
 .carrito-resumen { background: var(--tb-white); padding: 2rem; position: sticky; top: 6rem; }
 .carrito-resumen h2 { font-size: 1.5rem; margin-bottom: 1.5rem; }
-.carrito-resumen-fila { display: flex; justify-content: space-between; padding: .75rem 0; border-top: 1px solid var(--tb-line); font-size: .9375rem; }
+.carrito-resumen-fila { display: flex; justify-content: space-between; padding: .75rem 0; border-top: 1px solid var(--tb-line); font-size: 1rem; }
 .carrito-resumen-total { font-weight: 700; font-size: 1.125rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--tb-line); }
 .btn:disabled { opacity: .5; cursor: not-allowed; }
 /* Botones deshabilitados con la paleta de Tabula (en vez del azul de Bootstrap) */

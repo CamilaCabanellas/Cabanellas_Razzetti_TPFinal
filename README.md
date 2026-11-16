@@ -2,7 +2,7 @@
 
 Sitio web de una galería de arte ficticia que acerca la experiencia de ver y comprar arte a nuevos coleccionistas.
 
-Trabajo educativo realizado para ORT Argentina, materias **Desarrollo II + Programación I (2da pre-entrega: maquetado y Bootstrap personalizado).
+Trabajo educativo realizado para ORT Argentina, materias **Desarrollo II + Programación I** (entrega final: maquetado, Bootstrap personalizado, filtro de obras y carrito).
 
 ## Equipo
 
